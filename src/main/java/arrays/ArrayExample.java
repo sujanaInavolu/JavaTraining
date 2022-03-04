@@ -8,10 +8,10 @@ public class ArrayExample {
 		int[] marks = new int[6];
 		String[] names = { "sujana", "sudha", "krishna" };
 		for (int k = 0; k < names.length; k++) {
-			System.out.println("name"+" "+(k+1)+" "+names[k]);
+			System.out.println("name" + " " + (k + 1) + " " + names[k]);
 		}
 		for (int i = 0; i <= 5; i++) {
-			marks[i] = MyUtils.readInteger();
+			marks[i] = MyUtils.readInteger("marks");
 		}
 		System.out.println("Percentage of the student is: " + getPercentage(marks));
 

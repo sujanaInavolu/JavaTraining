@@ -1,39 +1,43 @@
 package maths;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
+import util.MyUtils;
+
 public class ElectricityBill {
+	private static final int SERVICE_CHARGE = 10;
+	private static final int GST = 15;
+	private static final int UNIT_CHARGE = 5;
 
-	private static final int R2 = 345;
-	private static final int R1 = 348;
-	private static final String R3 = "230";
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		String CMR = sc.nextLine();
-		System.out.println("Enter CMR: ");
-		Scanner sc2 = new Scanner(System.in);
-		String CMR2 = sc.nextLine();
-		System.out.println("Enter CMR: ");
-		int i = 1;
-		int bill = currentBill(i);
-		int R1 = getreadings();
-		int R2 = getreadings();
+		int cmr = MyUtils.readInteger("CMR");
+		int omr = MyUtils.readInteger("OMR");
+		String name = MyUtils.readString("Custmer Name");
+		printBill(cmr, omr, name);
 	}
 
-	private static int getreadings() {
-		int R3 = R1 - R2;
-		return R3;
+	private static void printBill(int cmr, int omr, String name) {
+		System.out.println(cmr);
+		System.out.println(omr);
+		System.out.println(name);
+		System.out.println("######## AP Electricity Board ##########");
+		System.out.println("Date: " + java.time.LocalDate.now());
+		System.out.println("Name : " + name);
+		System.out.println("DueDate: " + LocalDate.now().plusDays(30));
+		System.out.println("No of units consumed: " + (cmr - omr));
+		System.out.println("Total Charges to be paid: " + getTotalBill(omr, cmr));
 	}
 
-	private static int currentBill(int i) {
-		System.out.println("Bill no: " + i);
-		System.out.println("Number of Units consumed: " + R3);
-		int servicecharges = 100;
-		int GST = 150;
-		int unitsconsumed = 230;
-		int Amount = unitsconsumed * 10 + servicecharges + GST;
-		System.out.println("Amount to be paid: "+Amount);
-		return Amount;
+	private static int getTotalBill(int omr, int cmr) {
+		int billAmount = (cmr - omr) * 5;
+		int serviceCharge = (billAmount * 10 / 100);
+		int gst = (billAmount * 20 / 100);
+		int total = (billAmount + serviceCharge + gst);
+		System.out.println("consumed units charge : " + billAmount);
+		System.out.println("Service charges : " + serviceCharge);
+		System.out.println("GST : " + gst);
+		System.out.println("Total : " + total);
+		return total;
 	}
-
 }
