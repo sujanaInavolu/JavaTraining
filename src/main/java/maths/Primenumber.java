@@ -14,7 +14,7 @@ public static void main(String[] args) {
 		System.out.println(isItPrimenumber(i));
 	}
 }
-
+ 
 private static String isItPrimenumber(int number) {
 	if(number == 0 || number == 1) return number+" is not prime Number";
 	for(int i=2; i<=number/2;i++) {
