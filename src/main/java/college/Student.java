@@ -5,12 +5,13 @@ public class Student {
 	int id;
 	String department;
 	int[] marks;
+
 	public float getpercentage(int[] marks) {
 		int total = 0;
-		for(int i=0;i<marks.length;i++) {
+		for (int i = 0; i < marks.length; i++) {
 			total = total + marks[i];
 		}
-		return (total/marks.length);
+		return (total / marks.length);
 	}
 
 	public String getName() {
@@ -52,4 +53,13 @@ public class Student {
 		this.department = department;
 	}
 
+	public Student(int id, String name) {
+		super();
+		this.name = name;
+		this.id = id;
+	}
+
+	public Student() {
+
+	}
 }
