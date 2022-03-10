@@ -54,7 +54,7 @@ public class Student {
 	}
 
 	public Student(int id, String name) {
-		super();
+		super(); 
 		this.name = name;
 		this.id = id;
 	}
