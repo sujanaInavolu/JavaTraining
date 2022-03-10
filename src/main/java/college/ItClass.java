@@ -13,7 +13,7 @@ public class ItClass {
 		System.out.println("dept : " + s1.department);
 		Student s2 = new Student("krishna", 12, "dept");
 		Student s3 = new Student();
-		s3.setName("sujana");
+		s3.setName("sujana"); 
 		System.out.println("name : " + s3.name);
 		System.out.println("dept : " + s3.department);
 		Student s4 = new Student(111,"suji");
