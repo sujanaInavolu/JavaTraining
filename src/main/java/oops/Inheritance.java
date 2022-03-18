@@ -10,7 +10,7 @@ System.out.println("Music:"+v1.ourSpeed);
 v1.speedUp(30);
 System.out.println("Car after speedup:"+v1.curSpeed);
 int ecoSpeed;
-MarutiSwiftDezire v2 = new MarutiSwiftDezire();
+MarutiSwiftDezire v2 = new MarutiSwiftDezire(); 
 System.out.println("Dezire speed is:"+v2.curSpeed);
 MarutiSwiftDezire dezire = new MarutiSwiftDezire();
 System.out.println("Dezire ECO speed is:" +dezire.economySpeed);

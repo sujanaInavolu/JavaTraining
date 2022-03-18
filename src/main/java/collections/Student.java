@@ -18,6 +18,9 @@ public class Student {
 		this.phno = phno;
 	}
 
+	public Student() {
+	}
+
 	public int getId() {
 		return id;
 	}

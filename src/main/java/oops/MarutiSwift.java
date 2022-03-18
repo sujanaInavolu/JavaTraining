@@ -3,7 +3,7 @@ package oops;
 public class MarutiSwift extends Vehicle {
 	public MarutiSwift(String color, int speed) {
 		this.color = color;
-		this.curSpeed = speed;
+		this.curSpeed = speed; 
 	}
 
 	@Override
