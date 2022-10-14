@@ -28,8 +28,8 @@ public class SetExamples {
 		names.add("Sudha");
 		names.add(null);
 		System.out.println("names set : " + names);
-		for (String name : names) {
-			System.out.println(name);
+		for (String name1 : names) {
+			System.out.println(name1);
 		}
 	}
 }

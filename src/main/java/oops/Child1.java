@@ -17,6 +17,6 @@ public class Child1 extends Parent {
 	}
 	public void Child1(String color,String food) {
 		this.favColor = color;
-		this.favFood = food;F
+		this.favFood = food;
 	}
 }
