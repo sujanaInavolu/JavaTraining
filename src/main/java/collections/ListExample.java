@@ -11,7 +11,6 @@ public class ListExample {
 		names.add("krishna");
 		names.add("Sudha");
 		names.add("Rama");
-		names.add("Sujana");
 		System.out.println("Size :" + names.size());
 		names.ensureCapacity(10);
 		System.out.println("Size :" + names.size());
